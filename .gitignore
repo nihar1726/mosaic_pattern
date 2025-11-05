@@ -1,0 +1,59 @@
+# Build directories
+build/
+bin/
+lib/
+cmake-build-*/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Qt specific
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+
+# OpenCV
+*.pdb
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
