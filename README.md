@@ -1,197 +1,219 @@
 # 🧩 Mosaic Pattern Creator
 
-A desktop application that converts images into beautiful mosaic patterns using customizable tiles, shapes, and color modes.
+A desktop application that transforms images into stunning mosaic artworks using customizable tile shapes, sizes, and color modes.
 
-## Features
+## ✨ Overview
 
-- 📸 **Image Loading**: Support for PNG, JPG, JPEG, and BMP formats
-- 🎨 **Multiple Tile Shapes**: Square, Circle, and Hexagon tiles
-- 🌈 **Color Modes**:
-  - **Average**: Uses the average color of each region
-  - **Dominant**: Uses the dominant color (currently uses average as approximation)
-  - **Quantized**: Reduces colors to a palette for artistic effect
-- ⚙️ **Customizable Tile Size**: Adjustable from 5 to 100 pixels
-- 💾 **Export**: Save your mosaics as PNG or JPEG images
-- 🖥️ **Modern GUI**: Built with Qt for a professional desktop experience
+**Mosaic Pattern Creator** lets users load any image and generate a beautiful mosaic effect. You can adjust tile size, choose between different shapes (Square, Circle, or Hexagon), and apply various color processing modes for artistic effects — all through an elegant, Qt-based interface.
 
-## Requirements
+---
+
+## 🚀 Features
+
+- 📸 **Image Loading** — Supports PNG, JPG, JPEG, and BMP formats  
+- 🎨 **Multiple Tile Shapes** — Square ▪️ | Circle ⚪ | Hexagon ⬡  
+- ⚙️ **Customizable Tile Size** — Adjustable between 5 and 100 pixels  
+- 🌈 **Color Modes**  
+  - **Average**: Uses the average color per tile  
+  - **Dominant**: Uses the dominant color (currently approximated via average)  
+  - **Quantized**: Reduces image colors for a stylized appearance  
+- 💾 **Save & Export** — Export your generated mosaics as PNG or JPEG files  
+- 🖥️ **Modern GUI** — Built with **Qt6**, ensuring a smooth and interactive user experience  
+
+---
+
+## 🧱 Requirements
 
 ### Build Dependencies
 
-- **C++17** compatible compiler (GCC 7+, Clang 5+, MSVC 2017+)
-- **CMake** 3.16 or higher
-- **Qt6** (Core and Widgets modules)
-- **OpenCV** 4.x
+- **C++17** compatible compiler (GCC 7+, Clang 5+, MSVC 2017+)  
+- **CMake** 3.16 or newer  
+- **Qt6** (Core + Widgets modules)  
+- **OpenCV** 4.x  
 
-### Installing Dependencies
+---
 
-#### Ubuntu/Debian
+## ⚙️ Installation
+
+### Ubuntu / Debian
 ```bash
 sudo apt-get update
 sudo apt-get install build-essential cmake
 sudo apt-get install qt6-base-dev qt6-base-dev-tools
 sudo apt-get install libopencv-dev
-```
+Windows (via vcpkg)
+bash
 
-#### Windows (using vcpkg)
-```bash
+Copy code
 vcpkg install qt6-base
 vcpkg install opencv
-```
+macOS (via Homebrew)
+bash
 
-#### macOS (using Homebrew)
-```bash
+Copy code
 brew install cmake
 brew install qt6
 brew install opencv
-```
+🏗️ Building the Project
+Navigate to the project folder:
 
-## Building the Project
+bash
 
-1. **Clone or navigate to the project directory**:
-   ```bash
-   cd mosaic_pattern
-   ```
+Copy code
+cd mosaic_pattern
+Create a build directory:
 
-2. **Create build directory**:
-   ```bash
-   mkdir build
-   cd build
-   ```
-   
-   **PowerShell (Windows)**:
-   ```powershell
-   mkdir build; cd build
-   ```
-   Or run separately:
-   ```powershell
-   mkdir build
-   cd build
-   ```
+bash
 
-3. **Configure with CMake**:
-   ```bash
-   cmake ..
-   ```
-   
-   For Windows with vcpkg:
-   ```bash
-   cmake .. -DCMAKE_TOOLCHAIN_FILE=[path to vcpkg]/scripts/buildsystems/vcpkg.cmake
-   ```
+Copy code
+mkdir build
+cd build
+Windows PowerShell:
 
-4. **Build the project**:
-   ```bash
-   cmake --build .
-   ```
-   
-   Or use your system's build tool:
-   ```bash
-   make        # Linux/macOS
-   nmake       # Windows (MSVC)
-   ```
+powershell
 
-5. **Run the application**:
-   ```bash
-   ./bin/MosaicPatternCreator    # Linux/macOS
-   ```
-   ```powershell
-   .\bin\MosaicPatternCreator.exe # Windows PowerShell
-   ```
+Copy code
+mkdir build; cd build
+Configure using CMake:
 
-## Usage
+bash
 
-1. **Launch the application**
+Copy code
+cmake ..
+For Windows with vcpkg:
 
-2. **Load an image**:
-   - Click "Load Image" button
-   - Select an image file from your computer
-   - The original image will appear in the left preview pane
+bash
 
-3. **Adjust parameters**:
-   - **Tile Size**: Set the size of each mosaic tile (5-100 pixels)
-   - **Shape**: Choose between Square, Circle, or Hexagon tiles
-   - **Color Mode**: Select Average, Dominant, or Quantized mode
+Copy code
+cmake .. -DCMAKE_TOOLCHAIN_FILE=[path_to_vcpkg]/scripts/buildsystems/vcpkg.cmake
+Build the project:
 
-4. **Generate mosaic**:
-   - Click "Generate Mosaic" button
-   - The mosaic will appear in the right preview pane
-   - Adjust parameters and click again to regenerate
+bash
 
-5. **Save your creation**:
-   - Click "Save Mosaic" button
-   - Choose a location and filename
-   - Select PNG or JPEG format
-   - Your mosaic will be saved!
+Copy code
+cmake --build .
+Run the application:
 
-## Project Structure
+bash
 
-```
+Copy code
+./bin/MosaicPatternCreator     # Linux / macOS
+powershell
+
+Copy code
+.\bin\MosaicPatternCreator.exe # Windows PowerShell
+🧭 Usage Guide
+Launch the App
+Open Command Prompt, navigate to the executable location:
+
+bash
+
+Copy code
+D:\mosaic_pattern\build\bin>
+and run:
+
+bash
+
+Copy code
+MosaicPatternCreator.exe
+Load an Image
+Click “Load Image”
+Select your image (PNG, JPG, BMP, etc.)
+The image appears in the left preview pane
+Adjust Parameters
+Tile Size: 5–100 pixels
+Shape: Square ▪️ | Circle ⚪ | Hexagon ⬡
+Color Mode: Average | Dominant | Quantized
+Generate Mosaic
+Click “Generate Mosaic”
+The result appears on the right preview pane
+Adjust settings anytime and regenerate
+Save Your Mosaic
+Click “Save Mosaic”
+Choose format (PNG or JPEG) and output path
+🧩 Project Structure
+
+Copy code
 MosaicPatternCreator/
 │
 ├── src/
 │   ├── main.cpp                  # Entry point
-│   ├── MosaicGenerator.cpp       # Mosaic creation logic
-│   ├── ImageProcessor.cpp        # Image loading and processing
+│   ├── ImageProcessor.cpp        # Image loading and manipulation
+│   ├── MosaicGenerator.cpp       # Mosaic generation logic
 │   ├── UI.cpp                    # Qt GUI implementation
 │   └── Utils.cpp                 # Utility functions
 │
 ├── include/
-│   ├── MosaicGenerator.h
 │   ├── ImageProcessor.h
+│   ├── MosaicGenerator.h
 │   ├── UI.h
 │   └── Utils.h
 │
+├── build/
+│   ├── bin/                      # Contains executable
+│   ├── CMakeFiles/
+│   └── Makefile
+│
 ├── CMakeLists.txt                # Build configuration
-└── README.md                     # This file
-```
+└── README.md                     # Project documentation
+🧠 Architecture Overview
+Component
 
-## Architecture
+Responsibility
 
-### Core Components
+ImageProcessor
 
-- **ImageProcessor**: Handles image loading, resizing, and color extraction using OpenCV
-- **MosaicGenerator**: Converts images into mosaic patterns based on tile size, shape, and color mode
-- **UI**: Provides a Qt-based graphical interface for user interaction
-- **Utils**: Contains color utilities, file path helpers, and color quantization algorithms
+Loads and prepares the source image using OpenCV
 
-### Design Patterns
+MosaicGenerator
 
-- **Modular Design**: Clean separation of concerns between image processing, mosaic generation, and UI
-- **RAII**: Proper resource management for OpenCV matrices and Qt objects
-- **Factory-like Pattern**: Flexible tile generation based on shape selection
+Applies mosaic logic based on user-selected parameters
 
-## Future Enhancements
+UI
 
-- [ ] Custom tile pattern import
-- [ ] Text-based mosaics (ASCII/emoji)
-- [ ] Photo mosaics (using another image as tile set)
-- [ ] Real-time preview while adjusting parameters
-- [ ] Batch processing multiple images
-- [ ] Export color codes to text file
-- [ ] 3D tile rendering effects
+Handles GUI rendering and user interactions (Qt)
 
-## Contributing
+Utils
 
-Contributions are welcome! Feel free to submit issues, fork the repository, and create pull requests.
+Provides helper functions for color and math utilities
 
-## License
+Design Highlights
+Modular Architecture — Clear separation of logic and interface
+RAII Principles — Safe memory management for OpenCV & Qt objects
+Factory-like Tile Handling — Generates shapes dynamically based on user choice
+🔮 Future Enhancements
+Import custom tile patterns
+Text or emoji-based mosaics
+Photo mosaics using secondary images
+Real-time live preview
+Batch image processing
+Export color palette as text file
+3D rendering of mosaic tiles
+🤝 Contributing
+Contributions, ideas, and feature suggestions are welcome!
+You can fork this repository, open issues, or submit pull requests.
 
-This project is provided as-is for educational and personal use.
+⚖️ License
+This project is shared for educational and personal use.
+Feel free to explore, modify, and learn from it.
 
-## Troubleshooting
+🧩 Troubleshooting
+❗ CMake can’t find Qt6
+Ensure Qt6 is installed and point CMake to its directory:
 
-### CMake can't find Qt6
-- Ensure Qt6 is installed and `CMAKE_PREFIX_PATH` points to your Qt6 installation
-- Example: `cmake .. -DCMAKE_PREFIX_PATH=/path/to/qt6`
+bash
 
-### OpenCV not found
-- Make sure OpenCV is installed and in your system PATH
-- Or specify OpenCV path: `cmake .. -DOpenCV_DIR=/path/to/opencv`
+Copy code
+cmake .. -DCMAKE_PREFIX_PATH=/path/to/qt6
+❗ OpenCV not found
+Specify its installation path manually if needed:
 
-### Build errors on Windows
-- Ensure you're using a compatible compiler (MSVC 2017+ or MinGW)
-- Check that all dependencies are properly linked via vcpkg or manual installation
+bash
 
----
+Copy code
+cmake .. -DOpenCV_DIR=/path/to/opencv
+⚠️ Build errors on Windows
+Use MSVC 2017+ or MinGW
+Verify all dependencies are correctly installed and linked
+Enjoy creating beautiful mosaic art! 🎨🧩
 
-**Enjoy creating beautiful mosaics! 🎨**
